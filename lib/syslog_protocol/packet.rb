@@ -7,7 +7,7 @@ module SyslogProtocol
       assemble
     end
 
-    def assemble(max_size = 1024)
+    def assemble(max_size = 16384)
       unless @hostname and @facility and @severity and @tag
         raise "Could not assemble packet without hostname, tag, facility, and severity"
       end
